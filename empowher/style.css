@@ -1,0 +1,171 @@
+#particles-js {
+    position: fixed; /* Changed to fixed to cover whole viewport */
+    width: 100%;
+    height: 100vh; /* Changed to viewport height */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place it behind the content */
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ff80b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+}
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff4d94;
+    text-align: center;
+}
+
+section p, section ul {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff4d94;
+}
+
+form select, form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff4d94;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff1a75;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff80b3;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+#quiz-section, #diet-plan-section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff80b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff4d94;
+}
+
+#content-section, #diet-plan-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

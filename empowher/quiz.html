@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menopause Mental State Quiz</title>
+    <style> 
+    /* General body styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe0ef; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #ff8fc1; /* Bright pink */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Header text */
+header h1 {
+    font-size: 50px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #ff8fc1; /* Bright pink */
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+/* Container styling */
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto 60px; /* Add space for fixed header and footer */
+    text-align: center;
+}
+
+/* Quiz form header */
+h1 {
+    color: #d06299;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Question styling */
+.question {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+
+.question h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.question label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.question input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Button styling */
+button {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #d06299;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease all;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #c15c8d;
+}
+
+/* Result styling */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #d06299;
+}
+
+/* Responsive design */
+@media (max-width: 68px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .question h3 {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}
+
+       
+    </style>
+</head>
+<body>
+    <h1>Menopause Mental State Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. How have you been feeling emotionally lately?</h3>
+            <label><input type="radio" name="q1" value="0"> Calm and stable</label><br>
+            <label><input type="radio" name="q1" value="1"> Slightly irritable or moody</label><br>
+            <label><input type="radio" name="q1" value="2"> Frequently upset or anxious</label><br>
+            <label><input type="radio" name="q1" value="3"> Overwhelmed and unable to cope</label>
+        </div>
+        <div class="question">
+            <h3>2. Have you noticed any changes in your sleep patterns or difficulty sleeping?</h3>
+            <label><input type="radio" name="q2" value="0"> No changes; I sleep well</label><br>
+            <label><input type="radio" name="q2" value="1"> Occasionally restless nights</label><br>
+            <label><input type="radio" name="q2" value="2"> Frequently wake up in the middle of the night</label><br>
+            <label><input type="radio" name="q2" value="3"> Struggle to fall asleep or stay asleep most nights</label>
+        </div>
+        <div class="question">
+            <h3>3. Do you feel more stressed or overwhelmed than usual?</h3>
+            <label><input type="radio" name="q3" value="0"> Not at all</label><br>
+            <label><input type="radio" name="q3" value="1"> Sometimes, depending on the situation</label><br>
+            <label><input type="radio" name="q3" value="2"> Often feel stressed or overwhelmed</label><br>
+            <label><input type="radio" name="q3" value="3"> Always feel like stress is unmanageable</label>
+        </div>
+        <div class="question">
+            <h3>4. Have you been experiencing difficulty concentrating, memory lapses, or brain fog?</h3>
+            <label><input type="radio" name="q4" value="0"> Never</label><br>
+            <label><input type="radio" name="q4" value="1"> Rarely, but I notice it sometimes</label><br>
+            <label><input type="radio" name="q4" value="2"> Frequently find it hard to concentrate or remember things</label><br>
+            <label><input type="radio" name="q4" value="3"> Constantly struggle with focus and memory</label>
+        </div>
+        <div class="question">
+            <h3>5. Are you finding it harder to enjoy activities or hobbies that you used to love?</h3>
+            <label><input type="radio" name="q5" value="0"> No, I enjoy them just as much</label><br>
+            <label><input type="radio" name="q5" value="1"> Occasionally feel less interested</label><br>
+            <label><input type="radio" name="q5" value="2"> Often struggle to enjoy activities</label><br>
+            <label><input type="radio" name="q5" value="3"> Completely lost interest in hobbies I used to love</label>
+        </div>
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+    <div id="result" class="result"></div>
+
+    <script>
+        function calculateScore() {
+            const form = document.getElementById('quizForm');
+            const formData = new FormData(form);
+            let totalScore = 0;
+
+            // Loop through the form data to calculate total score
+            for (let [key, value] of formData.entries()) {
+                totalScore += parseInt(value);
+            }
+
+            // Normalize score to 10
+            const normalizedScore = (totalScore / 15) * 10;
+
+            window.location.href = `view.html?score=${normalizedScore.toFixed(1)}`;
+        }
+        
+    </script>
+</body>
+</html>

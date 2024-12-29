@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empow-Her: Women's Menopause Wellness</title>
+  <style>
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #510141;
+    }
+
+    /* Navbar styling */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ff6295;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3f0130;
+    }
+    .logo {
+      position: relative;
+      top: 20px;
+      right: 20px;
+      width: 70px; 
+    }
+    .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+
+    .text-section {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .text-section h1 {
+      font-size: 2rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .text-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .image-section {
+      flex: 1;
+      text-align: right;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Menopause Section */
+    .menopause-section {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .menopause-section h2 {
+      font-size: 2rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .menopause-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    /* Buttons Section */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6295;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #ff91c1;
+      transform: translateY(-3px);
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #510141;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ff6295;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3f0130;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 60px;
+    }
+
+    /* Section with Image on Left */
+    .left-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .left-image-section .image {
+      flex: 1;
+      text-align: left;
+    }
+
+    .left-image-section .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .left-image-section .text {
+      flex: 1;
+      padding-left: 20px;
+    }
+
+    .left-image-section h2 {
+      font-size: 2rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .left-image-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #ff6295;
+      color: #fff;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+  
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+  
+    .footer-container div {
+      flex: 1;
+      margin: 10px;
+    }
+  
+    .footer-about h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+  
+    .footer-about p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  
+    .footer-links h4,
+    .footer-contact h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fffdfe;
+    }
+  
+    .footer-links ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .footer-links ul li {
+      margin: 5px 0;
+    }
+  
+    .footer-links ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+  
+    .footer-links ul li a:hover {
+      color: #ff91c1;
+    }
+  
+    .footer-contact p {
+      margin: 5px 0;
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #fff;
+      padding-top: 10px;
+    }
+  
+    .footer-bottom p {
+      font-size: 12px;
+      margin: 0;
+    }
+  
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+  
+      .footer-container div {
+        margin-bottom: 20px;
+      }
+    }
+    .image-container {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      gap: 10px; 
+      margin: 20px;
+    }
+    .image-container img {
+      width: 45%; 
+      border-radius: 8px; 
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+      transition: transform 0.3s; 
+    }
+    .image-container img:hover {
+      transform: scale(1.05); 
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffebf1, #ffe6e9);
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(255, 116, 174, 0.637);
+      position: relative;
+    }
+    .logo {
+      position: relative;
+      top: 20px;
+      right: 20px;
+      width: 70px; 
+    }
+    h1, h2 {
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    .highlight {
+      background: linear-gradient(90deg, #ff4081, #e91e63);
+      color: #fff;
+      padding: 10px 15px;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+    .benefits, .examples {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+    .benefits li {
+      margin-bottom: 5px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px #e495bbf4;
+    }
+    .left-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .left-image-section .image {
+      flex: 1;
+      text-align: left;
+    }
+    .left-image-section .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .left-image-section .text {
+      flex: 1;
+      padding-left: 20px;
+    }
+    .left-image-section h2 {
+      font-size: 2rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    .left-image-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Chat interface styles */
+    #chat-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 250px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #chat-messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    #chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #e91e63;
+    }
+    #user-input {
+      flex-grow: 1;
+      padding: 5px;
+      border: 1px solid #e91e63;
+      border-radius: 5px;
+    }
+    #send-button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .message {
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      max-width: 80%;
+    }
+    .user-message {
+      background-color: #ffebf1;
+      align-self: flex-end;
+    }
+    .bot-message {
+      background-color: #e91e63;
+      color: #fff;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav>
+      <a href="landing.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="stages.html">Stages</a>
+      <a href="index.html">Diet</a>
+      <a href="exercise.html">Exercise</a>
+      <a href="advice.html">Counselor Advice</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="bootcamp.html">bootcamp</a>
+      <a href="quiz.html">personalized quiz</a>
+
+    </nav>
+    <div class="content-container">
+      <div class="text-section">
+        <h1>Empow-Her</h1>
+        <h1>Redefining Menopause with Strength</h1>
+        <p>
+          Empow-Her aims to support women through the journey of menopause by providing
+          insights, strength, and community to navigate this natural life stage with confidence.
+        </p>
+      </div>
+      <div class="image-section">
+        <img src="womenpic.jpg" alt="Empow-Her Illustration">
+      </div>
+    </div>
+    <div class="menopause-section">
+      <h2>What is Menopause?</h2>
+      <p>
+        Menopause is a natural phase of life when a woman’s body transitions out of its childbearing years. Think of it as a new chapter that usually begins in the late 40s or 50s.
+      </p>
+    </div>
+    <div class="buttons">
+      <a href="hot_flashes.html">&#127774; Hot Flashes</a>
+      <a href="night_sweats.html">&#127769; Night Sweats</a>
+      <a href="sleep_troubles.html">&#127968; Sleep Troubles</a>
+      <a href="dryness.html">&#128167; Dryness</a>
+      <a href="mood_swings.html">Mood Swings</a>
+    </div>
+    <div class="content-container">
+      <div class="text-section">
+        <h1>Why Does Menopause Happen?</h1>
+        <p>
+          It’s simply the body’s way of saying goodbye to periods and hello to a new phase of life. 
+          It’s not a disease—it’s a natural milestone every woman goes through.
+        </p>
+      </div>
+      <div class="image-section">
+        <img src="meno 1.jpg" alt="Empow-Her Illustration">
+      </div>
+    </div>
+    <div class="left-image-section">
+      <div class="image">
+        <img src="day.png" alt="World Menopause Day">
+      </div>
+      <div class="text">
+        <h2>World Menopause Day</h2>
+        <p>
+          World Menopause Day is observed every year on October 18th to raise awareness about menopause and
+          support women in this transitional phase. It’s a day to educate, empower, and encourage open conversations
+          about the changes and challenges women experience during menopause.
+        </p>
+      </div>
+    </div>
+  
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>Empow-Her</h3>
+          <p>
+            Empow-Her is dedicated to supporting women through the journey of menopause by providing insights, resources, and a strong sense of community.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Stages</a></li>
+            <li><a href="exercise.html">Exercise</a></li>
+            <li><a href="advice.html">Counselor Advice</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="bootcamp.html">bootcamp</a></li>
+            <li><a href="quiz .html">personalized quiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: support@empowher.com</p>
+          <p>Phone: +1 (555) 123-4567</p>
+          <p>Address: 123 Wellness Street, Cityname, Country</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Empow-Her. All rights reserved.</p>
+      </div>
+    </footer>
+     <!-- Include Particles.js -->
+     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  
+     <!-- Initialize Particles -->
+     <script src="landing.js"></script>
+
+  <!-- Chat interface -->
+  <div id="chat-container">
+    <div id="chat-messages"></div>
+    <div id="chat-input">
+      <input type="text" id="user-input" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <!-- Chat functionality -->
+  <script src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower-Her</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>Empower-Her</h1>
+        <p>Personalized Diet for Menopause</p>
+    </header>
+    <main>
+        <section id="content-section">
+            
+
+            <h2>Why is Diet Important During Menopause?</h2>
+            <p>
+                A proper diet during menopause is crucial to manage hormonal changes, maintain bone and heart health, 
+                and prevent weight gain. Nutrient-rich foods like calcium, vitamin D, and phytoestrogens support bone 
+                density and reduce symptoms like hot flashes.
+            </p>
+            <p>
+                A balanced intake of healthy fats, proteins, fiber, and antioxidants promotes muscle maintenance, 
+                mood stability, and overall well-being. Staying hydrated and avoiding excess sugar or processed foods 
+                further enhances health during this stage.
+            </p>
+        </section>
+        <section id="quiz-section">
+            <h2>Take a quick Quiz to get your personlized diet plan </h2>
+            <form id="quiz-form">
+                <label for="age">Age:</label>
+                <select id="age" name="age" required>
+                    <option value="30-40">30-40</option>
+                    <option value="40-50">40-50</option>
+                    <option value="50-60">50-60</option>
+                </select>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="bmi">Weight (kg) and Height (cm):</label>
+                <input type="number" id="weight" placeholder="Weight" required>
+                <input type="number" id="height" placeholder="Height" required>
+
+                <label for="activity">Physical Activity Level:</label>
+                <select id="activity" name="activity" required>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="active">Active</option>
+                </select>
+
+                <label for="conditions">Do you have any health conditions?</label>
+                <textarea id="conditions" placeholder="e.g., diabetes, hypertension"></textarea>
+
+                <label for="symptoms">Are you experiencing menopause-related symptoms?</label>
+                <textarea id="symptoms" placeholder="e.g., hot flashes, mood swings"></textarea>
+
+                <label for="allergies">Do you have any food allergies or intolerances?</label>
+                <textarea id="allergies" placeholder="e.g., gluten, lactose"></textarea>
+
+                <label for="supplements">Do you take any supplements?</label>
+                <textarea id="supplements" placeholder="e.g., Calcium, Vitamin D"></textarea>
+
+                <label for="meals">How many meals do you typically eat per day?</label>
+                <select id="meals" name="meals" required>
+                    <option value="1-2">1-2</option>
+                    <option value="3-4">3-4</option>
+                    <option value="5+">5+</option>
+                </select>
+
+                <label for="snacks">Do you consume snacks frequently?</label>
+                <select id="snacks" name="snacks" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="fastfood">How often do you consume processed or fast food?</label>
+                <select id="fastfood" name="fastfood" required>
+                    <option value="rarely">Rarely</option>
+                    <option value="occasionally">Occasionally</option>
+                    <option value="frequently">Frequently</option>
+                </select>
+
+                <label for="diet">Do you prefer vegetarian, non-vegetarian, or vegan meals?</label>
+                <select id="diet" name="diet" required>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+
+                <label for="exercise">How often do you exercise?</label>
+                <select id="exercise" name="exercise" required>
+                    <option value="never">Never</option>
+                    <option value="1-2">1-2 times a week</option>
+                    <option value="3+">3+ times a week</option>
+                </select>
+
+                <label for="alcohol">Do you consume alcohol?</label>
+                <select id="alcohol" name="alcohol" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="water">Do you drink enough water daily?</label>
+                <select id="water" name="water" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="not_sure">Not Sure</option>
+                </select>
+
+                <label for="goal">What is your primary goal?</label>
+                <select id="goal" name="goal" required>
+                    <option value="maintain">Maintain weight</option>
+                    <option value="lose">Lose weight</option>
+                    <option value="gain">Gain weight</option>
+                    <option value="bone">Improve bone health</option>
+                    <option value="menopause">Manage menopause symptoms</option>
+                </select>
+
+                <button type="button" onclick="navigateToDietPlan()">Get Diet Plan</button>
+            </form>
+    
+       
+    </main>
+
+    <footer>
+        <p> 2024 Empower-Her.</p>
+    </footer>
+</body>
+    <script>   function navigateToDietPlan() {
+    const age = document.getElementById('age').value;
+    const gender = document.getElementById('gender').value;
+    const weight = document.getElementById('weight').value;
+    const height = document.getElementById('height').value;
+    const activity = document.getElementById('activity').value;
+    const symptoms = document.getElementById('symptoms').value;
+    const goal = document.getElementById('goal').value;
+    window.location.href = `diet-plan.html?weight=${encodeURIComponent(weight)}&height=${encodeURIComponent(height)}&goal=${encodeURIComponent(goal)}`;
+    }
+</script>
+     <script src="script.js"></script>
+     
+     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+     <script src="landing.js"></script>
+</body>
+</html>

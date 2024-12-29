@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d1e3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left ;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .wide-box {
+            width: 90%;
+        }
+
+        .narrow-box {
+            width: 100%;
+        }
+
+        .medium-box {
+            width: 290%;
+        }
+
+        h1, h2, h3 {
+            margin: 20px , ;
+            color: #d06299;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 10px;
+        }
+
+        p, ul {
+            color: #555;
+            font-size: 16px;
+        }
+        button {
+            background-color: #d06299; /* Pink background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #c15c8d; /* Darker pink on hover */
+            transform: scale(1.05); /* Slightly enlarges the button */
+        }
+
+        @media (max-width: 726px) {
+            .box {
+                width: 180%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box wide-box">
+        <h1>Your Quiz Results</h1>
+        <p id="score-display"></p>
+        
+    </div>
+
+    <div id="content-box" class="box medium-box">
+        <!-- Content will be inserted dynamically based on the score -->
+    </div>
+
+    <script>
+        // Retrieve the score from the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const score = parseInt(params.get('score'), 10);
+
+        // Display the score
+        const scoreDisplay = document.getElementById('score-display');
+        scoreDisplay.textContent = `Your score is: ${score} out of 10.`;
+
+
+        // Get the content box
+        const contentBox = document.getElementById('content-box');
+        const resultsImage = document.getElementById('results-image');
+
+        // Render content based on the score
+        if (score > 7) {
+            contentBox.innerHTML = `
+                <h2>Support from Our Doctors</h2>
+                <p>Based on your quiz results, we recommend reaching out to one of our experienced doctors for assistance.</p>
+                <button onclick="redirectToSupport()">Get Support</button>
+            `;
+             
+        } else {
+            contentBox.innerHTML = `
+                <h2>You Are Doing Well!</h2>
+                <p>Your mood is relatively stable, but you can take steps to elevate it further with some basic diet and exercise tips.</p>
+                <h3>Yoga Suggestions:</h3>
+                <ul>
+                    <li>Child's Pose (Balasana)</li>
+                    <li>Cat-Cow Pose (Marjaryasana-Bitilasana)</li>
+                    <li>Bridge Pose (Setu Bandhasana)</li>
+                    <li>Legs-Up-The-Wall Pose (Viparita Karani)</li>
+                </ul>
+               
+                <h3>Meditation Tips:</h3>
+                <p>Practice mindfulness meditation for 10–15 minutes daily. Focus on your breath and let go of distractions.</p>
+                <h3>Basic Diet Tips:</h3>
+                <ul>
+                    <li>Include omega-3 fatty acids found in fish, walnuts, and flaxseeds.</li>
+                    <li>Consume complex carbs like whole grains, fruits, and vegetables.</li>
+                    <li>Stay hydrated—drink at least 8 glasses of water daily.</li>
+                    <li>Avoid processed sugars and opt for natural sweeteners like honey or dates.</li>
+                </ul>
+
+
+                <p>If you need additional support from experts --->  <button onclick="redirectToSupport()">Get Support</button>
+             
+            `;
+            resultsImage.src = "C:\Users\JANAVICA PRIYA J\Desktop\quiz\.vscode\diet.jpg"; // Image for high score
+        }
+
+        // Redirect function
+        function redirectToSupport() {
+            window.location.href = "advice.html";
+        }
+    </script>
+</body>
+</html>

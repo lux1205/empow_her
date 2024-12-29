@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowerHER - About Us</title>
+    <style>
+        #particles-js {
+            position: fixed; /* Changed to fixed to cover whole viewport */
+            width: 100%;
+            height: 100vh; /* Changed to viewport height */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind the content */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf1f9;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d12278;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #d12278;
+            margin: 10px auto 0;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .vision-mission {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffe6f0;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #d12278;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .image-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="image-section">
+         <img src="about.png" alt="about">
+        </div>
+        <div class="header">ABOUT US</div>
+        <div class="content">
+            <p>Welcome to EmpowerHER, a platform designed to inspire, uplift, and empower women to achieve their fullest potential. We are committed to creating a space where women can access resources, mentorship, and tools to grow in their personal and professional lives. Whether it's developing skills, building businesses, or finding a supportive community, EmpowerHER is here to break barriers and open doors to endless possibilities.</p>
+            <p>At EmpowerHER, we believe every woman deserves the opportunity to shine, lead, and leave an impact. Join us as we work together to build a future of equality, confidence, and success.</p>
+        </div>
+        <div class="vision-mission">
+            <div class="card">
+                <h3>OUR VISION</h3>
+                <p>To create a world where every woman is empowered to achieve her fullest potential, breaking barriers, embracing opportunities, and leading with confidence in every aspect of life.</p>
+            </div>
+            <div class="card">
+                <h3>OUR MISSION</h3>
+                <p>To provide a supportive platform that fosters education, skill development, mentorship, and entrepreneurship for women, enabling them to overcome challenges, build sustainable futures, and inspire generations to come.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="landing.js"></script>
+</body>
+</html>

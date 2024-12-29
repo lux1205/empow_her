@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menopause Awareness Bootcamps</title>
+    <style>
+        #particles-js {
+            position: fixed; /* Changed to fixed to cover whole viewport */
+            width: 100%;
+            height: 100vh; /* Changed to viewport height */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind the content */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF0F5;
+            color: #6d0057;
+        }
+        header {
+            background-color: #FF69B4;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .bootcamps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .bootcamp {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .bootcamp:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 6px 8px rgba(49, 48, 48, 0.15);
+        }
+        .bootcamp h3 {
+            background-color: #FF69B4;
+            color: white;
+            margin: 0;
+            padding: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .bootcamp:hover h3 {
+            background-color: #FF1493;
+        }
+        .bootcamp-content {
+            padding: 1rem;
+        }
+        .bootcamp button {
+            background-color: #FF1493;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .bootcamp button:hover {
+            background-color: #FF69B4;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #FF69B4;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>Menopause Awareness Bootcamps</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Embrace Your Journey</h2>
+            <p>Join our empowering bootcamps designed to support and educate women through their menopause transition. Gain knowledge, share experiences, and learn strategies for a healthier, more balanced life.</p>
+        </section>
+        <section class="bootcamps">
+            <div class="bootcamp">
+                <h3>Menopause Essentials</h3>
+                <div class="bootcamp-content">
+                    <p>A comprehensive introduction to understanding and managing menopause symptoms.</p>
+                    <p><strong>Duration:</strong> 4 weeks</p>
+                    <p><strong>Starts:</strong> March 1, 2025</p>
+                    <button onclick="enrollNow('Menopause Essentials')">Enroll Now</button>
+                </div>
+            </div>
+            <div class="bootcamp">
+                <h3>Hormonal Harmony</h3>
+                <div class="bootcamp-content">
+                    <p>Deep dive into hormonal changes during menopause and natural balancing techniques.</p>
+                    <p><strong>Duration:</strong> 6 weeks</p>
+                    <p><strong>Starts:</strong> April 5, 2025</p>
+                    <button onclick="enrollNow('Hormonal Harmony')">Enroll Now</button>
+                </div>
+            </div>
+            <div class="bootcamp">
+                <h3>Menopause & Beyond</h3>
+                <div class="bootcamp-content">
+                    <p>Focusing on long-term health and wellness strategies for post-menopausal women.</p>
+                    <p><strong>Duration:</strong> 8 weeks</p>
+                    <p><strong>Starts:</strong> June 23, 2025</p>
+                    <button onclick="enrollNow('Menopause & Beyond')">Enroll Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Menopause Awareness Bootcamps. Empowering women through knowledge and community.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelector('h1').style.opacity = '1';
+                document.querySelector('h1').style.transform = 'translateY(0)';
+            }, 100);
+
+            setTimeout(() => {
+                document.querySelector('.intro').style.opacity = '1';
+                document.querySelector('.intro').style.transform = 'translateY(0)';
+            }, 300);
+
+            document.querySelectorAll('.bootcamp').forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.animation = 'fadeInUp 0.5s forwards';
+                }, 500 + (index * 200));
+            });
+        });
+
+        function enrollNow(bootcampName) {
+            localStorage.setItem('selectedBootcamp', bootcampName);
+            window.location.href = 'https://forms.gle/4CcdUF9GmiKQj63h8';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  
+    <!-- Initialize Particles -->
+    <script src="landing.js"></script>
+</body>
+</html>
